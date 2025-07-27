@@ -26,18 +26,26 @@ This project uses C# and the .NET SDK to solve the problem. The application acce
 ### 1. **Build the Docker image**
 ```bash
 docker build -t pointsbeconsoleapp .
+```
+---
 
-### **2. Run the container with input arguments**
+### 2. **Run the container with input arguments**
+```
 docker run puzzle-solver [your-arguments]
+```
 example:
+```
 docker run pointsbeconsoleapp Sachin Virat Joe William Steve Shaq
+```
 
-## **Project Structure**
+---
 
-├── Dockerfile
-├── Program.cs 
-├── StringFormatter.cs        # Main logic
-├── README.md
+### **Project Structure**
+
+-> Dockerfile  
+-> Program.cs  
+-> StringFormatter.cs        # Main logic  
+-> README.md   
 
 
 
