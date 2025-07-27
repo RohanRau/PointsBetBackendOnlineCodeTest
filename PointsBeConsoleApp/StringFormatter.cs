@@ -16,16 +16,22 @@ namespace PointsBetBackendOnlineCodeTest
     {
 
         //Code to improve
-        public static string ToCommaSeparatedList(string[] items, string quote)
+        public static string ToCommaSeparatedList(string[] items, char quoteChar)
         {
-            StringBuilder query = new StringBuilder(string.Format("{0}{1}{0}", quote, items[0]));
-
-            if (items.Length > 1)
+            if (items.Length < 1)
             {
-                for (int i = 1; i < items.Length; i++)
+                return string.Empty;
+            }
+
+            StringBuilder query = new StringBuilder();
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (i > 0)
                 {
-                    query.Append(string.Format(", {0}{1}{0}", quote, items[i]));
+                    query.AppendFormat(", ");
                 }
+                query.AppendFormat("{0}{1}{0}", quoteChar, items[i]);
             }
 
             return query.ToString();
