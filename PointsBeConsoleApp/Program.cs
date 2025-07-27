@@ -1,2 +1,15 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using PointsBetBackendOnlineCodeTest;
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        string[] quoteText = new string[] { "Sachin", "Virat", "Joe", "William", "Steve", "Shaq" };
+
+        Console.WriteLine($"Single Quote Output: \n {StringFormatter.ToCommaSeparatedList(quoteText, '\'')}");
+
+        Console.WriteLine($"Double Quote Output: \n {StringFormatter.ToCommaSeparatedList(quoteText, '\"')}");
+    }
+}
