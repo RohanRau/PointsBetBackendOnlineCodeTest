@@ -1,4 +1,4 @@
-﻿using PointsBetBackendOnlineCodeTest;
+﻿using PointsBeConsoleApp;
 using System;
 using System.Text;
 
