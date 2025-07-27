@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "PointsBeConsoleApp": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
