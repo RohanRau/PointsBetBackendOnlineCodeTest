@@ -1,34 +1,36 @@
 ﻿using System.Text;
 
-namespace PointsBet_Backend_Online_Code_Test
+namespace PointsBeConsoleApp
 {
-
-    /*
-    Improve a block of code as you see fit in C#.
-    You may make any improvements you see fit, for example:
-      - Cleaning up code
-      - Removing redundancy
-      - Refactoring / simplifying
-      - Fixing typos
-      - Any other light-weight optimisation
-    */
+    /// <summary>
+    /// Formats a string array with specified quote character and joining them with commas
+    /// </summary>
+    /// <param name="items">Takes array of strings to be formatted</param>
+    /// <param name="quoteChar">Character to put around each item</param>
+    /// <returns>
+    /// Returns a single string with each item surrounded with specified character and separated by commas.
+    /// </returns>
     public class StringFormatter
     {
-
-        //Code to improve
-        public static string ToCommaSepatatedList(string[] items, string quote)
+        public static string ToCommaSeparatedList(string[] items, char quoteChar)
         {
-            StringBuilder qry = new StringBuilder(string.Format("{0}{1}{0}", quote, items[0]));
-
-            if (items.Length > 1)
+            if (items.Length < 1)
             {
-                for (int i = 1; i < items.Length; i++)
-                {
-                    qry.Append(string.Format(", {0}{1}{0}", quote, items[i]));
-                }
+                return string.Empty;
             }
 
-            return qry.ToString();
+            StringBuilder query = new StringBuilder();
+
+            for (int i = 0; i < items.Length; i++)
+            {
+                if (i > 0)
+                {
+                    query.AppendFormat(", ");
+                }
+                query.AppendFormat("{0}{1}{0}", quoteChar, items[i]);
+            }
+
+            return query.ToString();
         }
     }
 }
