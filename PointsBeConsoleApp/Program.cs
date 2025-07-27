@@ -6,7 +6,16 @@ class Program
 {
     static void Main(string[] args)
     {
-        string[] quoteText = new string[] { "Sachin", "Virat", "Joe", "William", "Steve", "Shaq" };
+        string[] quoteText;
+        if (args.Length > 1)
+        {
+            quoteText = args;
+        }
+        else
+        {
+            quoteText = ["Sachin", "Virat", "Joe", "William", "Steve", "Shaq"]; //Default
+        }
+
 
         Console.WriteLine($"Single Quote Output: \n {StringFormatter.ToCommaSeparatedList(quoteText, '\'')}");
 
