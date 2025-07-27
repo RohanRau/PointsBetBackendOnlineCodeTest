@@ -2,9 +2,16 @@
 
 namespace PointsBeConsoleApp
 {
+    /// <summary>
+    /// Formats a string array with specified quote character and joining them with commas
+    /// </summary>
+    /// <param name="items">Takes array of strings to be formatted</param>
+    /// <param name="quoteChar">Character to put around each item</param>
+    /// <returns>
+    /// Returns a single string with each item surrounded with specified character and separated by commas.
+    /// </returns>
     public class StringFormatter
     {
-
         public static string ToCommaSeparatedList(string[] items, char quoteChar)
         {
             if (items.Length < 1)
